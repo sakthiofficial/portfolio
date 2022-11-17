@@ -1,0 +1,6 @@
+
+@use"../abstract/_variables.sass" as var;
+
+.text-color{
+    color: var.$theme-color;
+  }

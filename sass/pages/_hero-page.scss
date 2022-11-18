@@ -78,6 +78,28 @@
          letter-spacing: 2.5px;
         text-shadow: -1px -1px 0.1px #f5f5f540;
       }
+      &__btn{
+        button{
+          font-family: 'Ubuntu', sans-serif;
+          transition: 500ms;
+          background-color:var.$theme-color;
+          padding:0.1rem 1.5rem;
+          font-size: 14px;
+          border: none;
+          outline: none;
+          border-radius: 3px;
+          font-weight: 600;
+          word-spacing: 5px;
+          letter-spacing: 1px;
+          &:hover{
+            color: var.$theme-color;
+            border:1px solid var.$theme-color;
+            background-color:transparent;
+            
+
+          }
+        }
+      }
     }
     
     &-img{

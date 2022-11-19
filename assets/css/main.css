@@ -97,10 +97,9 @@ body {
 
 .skill-page {
   background-color: #131313;
-  color: aliceblue;
-  align-items: center;
 }
 .skill-page__title {
+  color: #e6e2e2;
   margin-top: 2rem;
   text-align: center;
 }
@@ -116,11 +115,13 @@ body {
   letter-spacing: 2px;
 }
 .skill-page_content {
+  color: #e6e2e2;
   font-family: "Ubuntu", sans-serif;
   display: flex;
 }
 .skill-page_content-persentage {
-  padding: 5rem 10rem;
+  margin-top: 5rem;
+  padding: 0rem 10rem;
   font-size: 1.5rem;
   font-weight: 800;
 }
@@ -208,7 +209,8 @@ body {
   border-radius: 10px;
 }
 .skill-page_content__logos {
-  padding: 5rem 0rem;
+  margin-top: 4rem;
+  padding: 2rem 0px;
 }
 .skill-page_content__logos img {
   opacity: 0.9;
@@ -245,4 +247,56 @@ body {
 }
 .skill-page .skill-values p {
   font-size: 0.8rem;
+}
+
+.about-page {
+  width: 100%;
+  height: 100%;
+  background-color: #131313;
+}
+.about-page__title {
+  color: #e6e2e2;
+  margin-top: 2rem;
+  text-align: center;
+}
+.about-page__title h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+.about-page__title p {
+  margin-top: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #a50707;
+  letter-spacing: 2px;
+}
+.about-page__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-page__content_image {
+  padding: 0px 2rem;
+}
+.about-page__content_image img {
+  width: 28rem;
+  opacity: 0.8;
+}
+.about-page__content_text {
+  color: #e6e2e2;
+  text-align: justify;
+  padding: 0rem 11rem;
+}
+.about-page__content_text p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.about-page__content_text button {
+  margin-left: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  color: #a50707;
 }/*# sourceMappingURL=main.css.map */

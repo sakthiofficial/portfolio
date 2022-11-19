@@ -1,41 +1,22 @@
 @use"../abstract/_variables.sass" as var;
 @use "../global/font";
 @use "../utilities/persentage" as persent;
+@use "../utilities/page-title" as header;
 
 .skill-page {
 
     background-color: #131313;
-    color: aliceblue;
-    align-items: center;
-
-    &__title {
-        margin-top: 2rem;
-
-        text-align: center;
-
-        h4 {
-            font-family: font.$text;
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-        }
-
-        p {
-            margin-top: 0.5rem;
-            font-family: font.$title;
-            color: var.$theme-color;
-            letter-spacing: 2px;
-
-        }
-
-    }
+    @include header.pageTitle();
 
     &_content {
+        color: var.$text-color;
         font-family: font.$text;
 
         display: flex;
 
         &-persentage {
-            padding: 5rem 10rem;
+            margin-top: 5rem;
+            padding: 0rem 10rem;
             font-size: 1.5rem;
             font-weight: 800;
 
@@ -70,7 +51,8 @@
         }
 
         &__logos {
-            padding: 5rem 0rem;
+            margin-top: 4rem;
+            padding: 2rem 0px;
             img{
                 opacity: 0.9;
             }

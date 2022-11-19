@@ -1,0 +1,46 @@
+@use"../abstract/_variables.sass" as var ;
+@use "../utilities/page-title" as header;
+@use "../global/font";
+  
+
+.about-page{
+    width: 100%;
+    height: 100%;
+    @include header.pageTitle();
+    background-color: #131313;
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &_image{
+            
+            padding: 0px 2rem;
+           
+            img{
+                width:28rem;
+      opacity: 0.8;
+     
+            }
+        }
+        &_text{
+            
+          
+            color:var.$text-color;
+            text-align:justify;
+            padding: 0rem 11rem;
+            p{
+                font-family: font.$text;
+                font-size: 1rem;
+                line-height: 2rem;
+            }
+            button{
+                margin-left: 5px;
+                font-family: font.$text;
+                font-size: 1rem;
+        background:transparent;
+        border: none;
+        color:var.$theme-color;
+            }
+        }
+    }
+}

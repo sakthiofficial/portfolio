@@ -25,6 +25,7 @@
 .hero-page__navBar__title h4 {
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
+  color: #e6e2e2;
 }
 .hero-page__navBar__menus a {
   transition: 500ms;
@@ -59,7 +60,7 @@
 }
 .hero-page-contant-about h4 {
   font-size: 2.5rem;
-  color: black;
+  color: #e6e2e2;
   font-family: "Poppins", sans-serif;
   letter-spacing: 2.5px;
   text-shadow: -1px -1px 0.1px rgba(245, 245, 245, 0.2509803922);

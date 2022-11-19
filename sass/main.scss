@@ -8,10 +8,10 @@
 
 /* global */
 @import "./global/reset";
-@import "./global/_fonts.sass";
+@import "./global/font";
 @import "./global/text";
 
 /* pages */
 @import "./pages/hero-page";
-
+@import"./pages/skill_page";
 

@@ -1,0 +1,134 @@
+@use"../abstract/_variables.sass" as var;
+@use "../global/font";
+@use "../utilities/persentage" as persent;
+
+.skill-page {
+
+    background-color: #131313;
+    color: aliceblue;
+    align-items: center;
+
+    &__title {
+        margin-top: 2rem;
+
+        text-align: center;
+
+        h4 {
+            font-family: font.$text;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+
+        p {
+            margin-top: 0.5rem;
+            font-family: font.$title;
+            color: var.$theme-color;
+            letter-spacing: 2px;
+
+        }
+
+    }
+
+    &_content {
+        font-family: font.$text;
+
+        display: flex;
+
+        &-persentage {
+            padding: 5rem 10rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+
+            &__html {
+                margin: 2rem 0px;
+                @include persent.persentage(16rem);
+
+                &.persent {
+                    margin: 1rem 0px;
+                }
+            }
+
+            &__css {
+                margin: 2rem 0px;
+                @include persent.persentage(13rem)
+            }
+
+            &__js {
+                margin: 2rem 0px;
+                @include persent.persentage(11rem)
+            }
+
+            &__bs {
+                margin: 2rem 0px;
+                @include persent.persentage(9rem)
+            }
+
+            &__sass {
+                margin: 2rem 0px;
+                @include persent.persentage(8rem)
+            }
+        }
+
+        &__logos {
+            padding: 5rem 0rem;
+            img{
+                opacity: 0.9;
+            }
+            .img-1 {
+                display: flex;
+                justify-content: space-around;
+
+                .logo-1 {
+                    img {
+                        width: 155px;
+                        margin: 10px;
+
+                    }
+                }
+
+                .logo-2 {
+                  
+
+                    img {
+                        width: 170px;
+                        margin: 10px;
+
+
+                        aspect-ratio: 1/1;
+                    }
+                }
+
+                .logo-3 {
+                    img {
+                        width: 190px;
+                        aspect-ratio: 1/1;
+
+                    }
+                }
+            }
+            .img-2{
+                display: flex;
+                justify-content: space-around;
+                margin-top: 20px;
+                img{
+                    width: 190px;
+                }
+
+
+        }
+    }
+}
+
+    .skill-values {
+        max-width: 300px;
+
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+}
+

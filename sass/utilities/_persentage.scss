@@ -1,0 +1,18 @@
+
+@use "../abstract/_variables.sass" as var;
+@mixin persentage ($val){
+    .persent {
+        margin: 1rem 0px;
+        width: 300px;
+        border:0.5px solid white;
+        height: 6px;
+      
+        border-radius: 10px;
+    }
+    .persent-col{
+        background-color:var.$theme-color;
+        width: $val;
+        height: 5px;
+        border-radius: 10px;
+    }
+}

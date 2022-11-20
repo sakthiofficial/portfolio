@@ -299,4 +299,171 @@ body {
   background: transparent;
   border: none;
   color: #a50707;
+}
+
+.project-page {
+  background-color: #131313;
+}
+.project-page__title {
+  color: #e6e2e2;
+  margin-top: 2rem;
+  text-align: center;
+}
+.project-page__title h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+.project-page__title p {
+  margin-top: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #a50707;
+  letter-spacing: 2px;
+}
+.project-page__images {
+  padding: 2rem 4rem;
+}
+.project-page__images img {
+  display: block;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+}
+.project-page__images .img-1 {
+  display: flex;
+}
+.project-page__images .fixed {
+  background-color: #fff;
+  margin-right: 3rem;
+  background-color: #323232;
+  margin-right: 3rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 2px 1px 10px #616161;
+}
+.project-page__images .fixed:hover {
+  box-shadow: 4px 2px 30px #616161;
+}
+.project-page__images .img-2 {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-around;
+}
+.project-page__images .img-2 div {
+  background-color: #fff;
+  margin-right: 3rem;
+  background-color: #323232;
+  margin-right: 3rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.project-page__images_countryApi {
+  max-width: 350px;
+}
+.project-page__images_countryApi img {
+  width: 350px;
+}
+.project-page__images button {
+  border: none;
+  background: transparent;
+  color: #e6e2e2;
+}
+.project-page__images button:hover {
+  color: #9d9595;
+}
+.project-page__images button:hover .fonAwe {
+  color: #e6e2e2;
+}
+.project-page__images .btn {
+  transition: 500ms;
+  text-align: center;
+  width: 20rem;
+  margin: 0.5rem 0px;
+}
+.project-page__images_api {
+  max-width: 500px;
+}
+.project-page__images_api img {
+  width: 500px;
+  height: 200px;
+}
+.project-page__images_api .btn {
+  width: 33rem;
+}
+
+.fonAwe {
+  color: #9d9595;
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.contact-page {
+  background-color: #131313;
+}
+.contact-page__title {
+  color: #e6e2e2;
+  margin-top: 2rem;
+  text-align: center;
+}
+.contact-page__title h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+.contact-page__title p {
+  margin-top: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #a50707;
+  letter-spacing: 2px;
+}
+.contact-page_content {
+  margin-top: 10rem;
+  font-family: "Ubuntu", sans-serif;
+}
+.contact-page_content p {
+  font-size: 1.5rem;
+  margin-right: 2rem;
+  letter-spacing: 2px;
+}
+.contact-page_content_info {
+  padding: 0rem 32rem;
+}
+.contact-page_content_info .logo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: #e6e2e2;
+}
+.contact-page_content_info div {
+  color: #e6e2e2;
+}
+.contact-page_content_items {
+  transition: 700ms;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.contact-page_content_items a {
+  padding: 0px 2rem;
+  color: #fff;
+}
+.contact-page_content_items a:hover {
+  color: #9d9595;
+}
+
+.fan {
+  margin-right: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+.fan:hover {
+  color: #9d9595;
+}
+
+.footer {
+  background-color: rgb(109, 107, 107);
+  margin-top: 9rem;
+}
+.footer .foot {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  padding: 2rem 0rem;
 }/*# sourceMappingURL=main.css.map */

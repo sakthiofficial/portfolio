@@ -1,0 +1,13 @@
+@use "../abstract/_variables.sass" as var;
+@use "../utilities/page-title" as head;
+@use "../global/font";
+
+.footer{
+    background-color:rgb(109, 107, 107);
+    margin-top: 9rem;
+    .foot{
+        font-family: font.$text;
+       text-align: center;
+       padding: 2rem 0rem;
+    }
+}

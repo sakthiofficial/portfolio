@@ -20,16 +20,50 @@ body {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 576px) {
+  .hero-page__background img {
+    height: 120%;
+  }
+}
 .hero-page__navBar {
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   z-index: 999;
 }
+@media (max-width: 576px) {
+  .hero-page__navBar {
+    width: 100%;
+    padding: 2rem 2rem;
+    font-size: 2rem;
+  }
+}
 .hero-page__navBar__title h4 {
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   color: #e6e2e2;
+}
+@media (max-width: 576px) {
+  .hero-page__navBar__title h4 {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero-page__navBar__menus {
+    display: none;
+  }
+}
+.hero-page__navBar__menus-sm {
+  display: none;
+  color: #e6e2e2;
+}
+.hero-page__navBar__menus-sm:hover {
+  color: #616161;
+}
+@media (max-width: 576px) {
+  .hero-page__navBar__menus-sm {
+    display: block;
+  }
 }
 .hero-page__navBar__menus a {
   transition: 500ms;
@@ -47,10 +81,20 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 576px) {
+  .hero-page-content {
+    flex-direction: column;
+  }
+}
 .hero-page-content-about {
   line-height: 3.5rem;
   padding: 2rem 8rem;
   font-weight: 900;
+}
+@media (max-width: 576px) {
+  .hero-page-content-about {
+    padding: 1rem 3rem;
+  }
 }
 .hero-page-content-about .abt {
   font-weight: 600;
@@ -94,6 +138,11 @@ body {
   width: 35rem;
   opacity: 0.8;
 }
+@media (max-width: 576px) {
+  .hero-page-content-img img {
+    width: 100%;
+  }
+}
 
 .skill-page {
   background-color: #131313;
@@ -114,16 +163,31 @@ body {
   color: #a50707;
   letter-spacing: 2px;
 }
+@media (max-width: 576px) {
+  .skill-page__title {
+    margin-top: 2rem;
+  }
+}
 .skill-page_content {
   color: #e6e2e2;
   font-family: "Ubuntu", sans-serif;
   display: flex;
+}
+@media (max-width: 576px) {
+  .skill-page_content {
+    flex-direction: column;
+  }
 }
 .skill-page_content-persentage {
   margin-top: 5rem;
   padding: 0rem 10rem;
   font-size: 1.5rem;
   font-weight: 800;
+}
+@media (max-width: 576px) {
+  .skill-page_content-persentage {
+    padding: 0rem 2rem;
+  }
 }
 .skill-page_content-persentage__html {
   margin: 2rem 0px;
@@ -219,6 +283,11 @@ body {
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 576px) {
+  .skill-page_content__logos .img-1 {
+    justify-content: space-between;
+  }
+}
 .skill-page_content__logos .img-1 .logo-1 img {
   width: 155px;
   margin: 10px;
@@ -227,6 +296,12 @@ body {
   width: 170px;
   margin: 10px;
   aspect-ratio: 1/1;
+}
+@media (max-width: 576px) {
+  .skill-page_content__logos .img-1 .logo-3 {
+    display: none;
+    text-align: center;
+  }
 }
 .skill-page_content__logos .img-1 .logo-3 img {
   width: 190px;
@@ -237,8 +312,25 @@ body {
   justify-content: space-around;
   margin-top: 20px;
 }
+@media (max-width: 576px) {
+  .skill-page_content__logos .img-2 {
+    justify-content: space-between;
+  }
+}
 .skill-page_content__logos .img-2 img {
   width: 190px;
+}
+.skill-page_content__logos .logo-dummy {
+  display: none;
+}
+.skill-page_content__logos .logo-dummy img {
+  width: 190px;
+}
+@media (max-width: 576px) {
+  .skill-page_content__logos .logo-dummy {
+    text-align: center;
+    display: block;
+  }
 }
 .skill-page .skill-values {
   max-width: 300px;
@@ -275,6 +367,11 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+@media (max-width: 576px) {
+  .about-page__content {
+    flex-direction: column;
+  }
+}
 .about-page__content_image {
   padding: 0px 2rem;
 }
@@ -283,9 +380,16 @@ body {
   opacity: 0.8;
 }
 .about-page__content_text {
+  background-color: #131313;
   color: #e6e2e2;
   text-align: justify;
   padding: 0rem 11rem;
+}
+@media (max-width: 576px) {
+  .about-page__content_text {
+    padding: 2rem 2rem;
+    margin: 6rem 0px;
+  }
 }
 .about-page__content_text p {
   font-family: "Ubuntu", sans-serif;
@@ -321,24 +425,46 @@ body {
   letter-spacing: 2px;
 }
 .project-page__images {
+  margin-top: 2rem;
   padding: 2rem 4rem;
+}
+@media (max-width: 576px) {
+  .project-page__images {
+    padding: 0rem 1rem;
+  }
 }
 .project-page__images img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   aspect-ratio: 16/9;
+}
+@media (max-width: 576px) {
+  .project-page__images img {
+    margin-top: 2rem;
+  }
 }
 .project-page__images .img-1 {
   display: flex;
+}
+@media (max-width: 576px) {
+  .project-page__images .img-1 {
+    flex-direction: column;
+  }
 }
 .project-page__images .fixed {
   background-color: #fff;
   margin-right: 3rem;
   background-color: #323232;
-  margin-right: 3rem;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 2px 1px 10px #616161;
+}
+@media (max-width: 576px) {
+  .project-page__images .fixed {
+    overflow: visible;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
 }
 .project-page__images .fixed:hover {
   box-shadow: 4px 2px 30px #616161;
@@ -348,19 +474,36 @@ body {
   margin-top: 2rem;
   justify-content: space-around;
 }
+@media (max-width: 576px) {
+  .project-page__images .img-2 {
+    padding: 0rem 1rem;
+    flex-direction: column;
+  }
+}
 .project-page__images .img-2 div {
   background-color: #fff;
   margin-right: 3rem;
   background-color: #323232;
-  margin-right: 3rem;
   overflow: hidden;
   border-radius: 10px;
+}
+@media (max-width: 576px) {
+  .project-page__images .img-2 div {
+    overflow: visible;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
 }
 .project-page__images_countryApi {
   max-width: 350px;
 }
 .project-page__images_countryApi img {
   width: 350px;
+}
+@media (max-width: 576px) {
+  .project-page__images_countryApi img {
+    width: 100%;
+  }
 }
 .project-page__images button {
   border: none;
@@ -379,6 +522,11 @@ body {
   width: 20rem;
   margin: 0.5rem 0px;
 }
+@media (max-width: 576px) {
+  .project-page__images .btn {
+    width: 100%;
+  }
+}
 .project-page__images_api {
   max-width: 500px;
 }
@@ -386,8 +534,18 @@ body {
   width: 500px;
   height: 200px;
 }
+@media (max-width: 576px) {
+  .project-page__images_api img {
+    width: 100%;
+  }
+}
 .project-page__images_api .btn {
   width: 33rem;
+}
+@media (max-width: 576px) {
+  .project-page__images_api .btn {
+    width: 100%;
+  }
 }
 
 .fonAwe {

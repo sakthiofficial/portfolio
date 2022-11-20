@@ -1,21 +1,31 @@
 @use "../abstract/_variables.sass" as var;
 @use "../utilities/page-title" as header;
+@use "../abstract/mixin" as res;
 
 .project-page {
     @include header.pageTitle();
     background-color: #131313;
     &__images{
-       
+       margin-top: 2rem;
         padding: 2rem 4rem;
+        @include res.responsive(xs) {
+          padding: 0rem 1rem;
+         }
         img{
             display: block;
-           max-width: 100%;
+           width: 100%;
             
           
             aspect-ratio: 16/9;
+            @include res.responsive(xs) {
+             margin-top: 2rem;
+               }
         }
         .img-1{
            display: flex;
+           @include res.responsive(xs) {
+           flex-direction: column;
+           }
          
         }
         .fixed{
@@ -23,10 +33,15 @@
             background-color: #fff;
             margin-right: 3rem;
             background-color: #323232;
-            margin-right: 3rem;
+            
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 2px 1px 10px #616161;
+            @include res.responsive(xs) {
+                overflow:visible;
+                margin-right: 0rem;
+                margin-bottom: 1rem;
+             }
         &:hover{
             box-shadow: 4px 2px 30px #616161;
 
@@ -38,6 +53,10 @@
             display: flex;
             margin-top:2rem;
             justify-content: space-around;
+            @include res.responsive(xs) {
+                padding: 0rem 1rem;
+                flex-direction: column;
+               }
            
             div{
                
@@ -45,9 +64,14 @@
                 background-color: #fff;
                 margin-right: 3rem;
                 background-color: #323232;
-                margin-right: 3rem;
                 overflow: hidden;
                 border-radius: 10px;
+                @include res.responsive(xs) {
+                   
+                    overflow:visible;
+                    margin-right: 0rem;
+                    margin-bottom: 1rem;
+                 }
                 
             
     
@@ -59,6 +83,9 @@
 
             img{
                 width: 350px;
+                @include res.responsive(xs) {
+                   width: 100%;
+                   }
             }
         }
         button{
@@ -81,18 +108,29 @@
             text-align: center;
             width: 20rem;
             margin: 0.5rem 0px;
+            @include res.responsive(xs) {
+                width: 100%;
+               }
             
          
         }
         &_api{
             max-width: 500px;
+
         img{
             width: 500px;
             height:200px;
+            @include res.responsive(xs) {
+               width: 100%;
+               
+               }
             
         }
         .btn{
             width: 33rem;
+            @include res.responsive(xs) {
+               width: 100%;
+               }
           
         }
         }

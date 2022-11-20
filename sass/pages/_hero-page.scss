@@ -1,4 +1,5 @@
 @use "../abstract/_variables.sass" as var;
+@use "../abstract/mixin" as res;
 
 .hero-page {
  
@@ -9,6 +10,12 @@
       z-index: -1;
       width: 100%;
       height:100%;
+      @include res.responsive(xs){
+        height: 120%;
+       
+          
+        }
+
     }
 
   }
@@ -21,6 +28,13 @@
     display: flex;
     justify-content: space-between;
     z-index: 999;
+    @include res.responsive(xs){
+    width: 100%;
+    padding: 2rem 2rem;
+       
+        font-size: 2rem;
+      
+    }
 
     &__title {
       
@@ -28,6 +42,10 @@
         font-size: 1.5rem;
         font-family: 'Poppins', sans-serif;
         color: var.$text-color;
+        @include res.responsive(xs){
+      font-size: 1.7rem;
+            
+          }
 
       }
 
@@ -37,7 +55,24 @@
 
     &__menus {
 
+      @include res.responsive(xs){
+        display: none;
+       
+          
+        }
+        &-sm{
+          display: none;
+          color: var.$text-color;
+          &:hover {
 
+            color: #616161;
+          }
+          @include res.responsive(xs){
+            display:block;
+           
+              
+            }
+        }
       a {
         transition: 500ms;
         text-decoration: none;
@@ -62,10 +97,20 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @include res.responsive(xs){
+      flex-direction: column;
+     
+        
+      }
     &-about{
       line-height: 3.5rem;
       padding:2rem 8rem;
       font-weight: 900;
+      @include res.responsive(xs){
+       
+        padding: 1rem 3rem;
+          
+        }
       .abt{
         font-weight:600;
         font-family: 'Poppins', sans-serif;
@@ -76,6 +121,12 @@
         color: var.$text-color;
         font-size: 1.5rem;
         font-family: 'Ubuntu', sans-serif;
+        @include res.responsive(xs){
+       
+        
+          
+        }
+        
       }
       h4{
     
@@ -114,6 +165,11 @@
       img{
       width:35rem;
       opacity: 0.8;
+      @include res.responsive(xs){
+        width: 100%;
+       
+          
+        }
       }
     }
   }

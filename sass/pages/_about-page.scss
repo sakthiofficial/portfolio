@@ -1,6 +1,7 @@
 @use"../abstract/_variables.sass" as var ;
 @use "../utilities/page-title" as header;
 @use "../global/font";
+@use "../abstract/mixin" as res;
   
 
 .about-page{
@@ -12,6 +13,9 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        @include res.responsive(xs) {
+            flex-direction: column;
+        }
         &_image{
             
             padding: 0px 2rem;
@@ -24,10 +28,14 @@
         }
         &_text{
             
-          
+            background-color: #131313;
             color:var.$text-color;
             text-align:justify;
             padding: 0rem 11rem;
+            @include res.responsive(xs) {
+               padding: 2rem 2rem;
+               margin: 6rem 0px;
+            }
             p{
                 font-family: font.$text;
                 font-size: 1rem;

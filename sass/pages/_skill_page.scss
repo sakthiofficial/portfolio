@@ -2,11 +2,20 @@
 @use "../global/font";
 @use "../utilities/persentage" as persent;
 @use "../utilities/page-title" as header;
+@use "../abstract/mixin" as res;
 
 .skill-page {
 
+
     background-color: #131313;
     @include header.pageTitle();
+    &__title{
+        @include res.responsive(xs) {
+          margin-top: 2rem;
+        }
+    }
+
+    @include res.responsive(xs) {}
 
     &_content {
         color: var.$text-color;
@@ -14,11 +23,18 @@
 
         display: flex;
 
+        @include res.responsive(xs) {
+            flex-direction: column;
+        }
+
         &-persentage {
             margin-top: 5rem;
             padding: 0rem 10rem;
             font-size: 1.5rem;
             font-weight: 800;
+            @include res.responsive(xs) {
+                padding: 0rem 2rem;
+            }
 
             &__html {
                 margin: 2rem 0px;
@@ -53,12 +69,21 @@
         &__logos {
             margin-top: 4rem;
             padding: 2rem 0px;
-            img{
+
+            @include res.responsive(xs) {
+                
+            }
+
+            img {
                 opacity: 0.9;
             }
+
             .img-1 {
                 display: flex;
                 justify-content: space-around;
+                @include res.responsive(xs) {
+                    justify-content: space-between;
+                }
 
                 .logo-1 {
                     img {
@@ -69,7 +94,7 @@
                 }
 
                 .logo-2 {
-                  
+
 
                     img {
                         width: 170px;
@@ -81,25 +106,51 @@
                 }
 
                 .logo-3 {
+                    @include res.responsive(xs) {
+                        display: none;
+                        text-align: center;
+                    }
+
                     img {
                         width: 190px;
                         aspect-ratio: 1/1;
 
+
                     }
                 }
             }
-            .img-2{
+
+            .img-2 {
                 display: flex;
                 justify-content: space-around;
                 margin-top: 20px;
-                img{
+                @include res.responsive(xs) {
+                    justify-content: space-between;
+                }
+
+                img {
                     width: 190px;
                 }
 
 
+            }
+
+            .logo-dummy {
+
+                display: none;
+
+                img {
+                    width: 190px;
+                }
+
+                @include res.responsive(xs) {
+                    text-align: center;
+                    display: block;
+                }
+
+            }
         }
     }
-}
 
     .skill-values {
         max-width: 300px;
@@ -113,4 +164,3 @@
     }
 
 }
-

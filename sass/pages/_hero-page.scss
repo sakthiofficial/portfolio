@@ -10,13 +10,14 @@
       z-index: -1;
       width: 100%;
       height:100%;
+      
       @include res.responsive(xs){
         height: 120%;
        
           
         }
         @include res.responsive(md){
-          height: 105%;
+          height: 205%;
          
             
           }
@@ -27,22 +28,30 @@
 
   &__navBar {
 
- 
+ position:fixed;
+ top: 0px;
+ width: 95%;
+ background-color: #131313;
+ box-shadow: 0px 0.1px 0.5px var.$text-color;
+
     padding: 1rem 2rem;
     
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 999;
     @include res.responsive(xs){
   
     padding: 2rem 2rem;
        
         font-size: 2rem;
+        width: 85%;
       
     }
     @include res.responsive(md){
   
       padding: 2rem 2rem;
+
          
         
         
@@ -64,31 +73,23 @@
                 }
 
       }
+    
 
  
 
     }
 
     &__menus {
-
+      
+       
       @include res.responsive(xs){
-        display: none;
+        display:none;
+        
        
           
         }
-        &-sm{
-          display: none;
-          color: var.$text-color;
-          &:hover {
-
-            color: #616161;
-          }
-          @include res.responsive(xs){
-            display:block;
-           
-              
-            }
-        }
+       
+       
       a {
         transition: 500ms;
         text-decoration: none;
@@ -104,12 +105,29 @@
 
       }
     }
+    .NavToggle{
+         
+      color: var.$text-color;
+      display: none;
+     
+      &:hover {
+
+        color: #616161;
+      }
+    
+      
+        @include res.responsive(xs){
+     
+          display: block;
+             
+           }
+    }
 
 
 
   }
   &-content{
-  
+ margin-top: 4.5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -118,6 +136,13 @@
      
         
       }
+      @include res.responsive(md){
+        flex-direction: column;
+        
+        
+       
+          
+        }
     &-about{
       line-height: 3.5rem;
       padding:2rem 8rem;
@@ -129,7 +154,7 @@
         }
         @include res.responsive(md){
        
-          padding: 2rem 4rem;
+          padding: 15rem 2rem;
             
           }
       .abt{
@@ -182,7 +207,7 @@
     }
     
     &-img{
-    margin-top: 3.2rem;
+    margin-top: 4.3rem;
       img{
       width:35rem;
       opacity: 0.8;
@@ -199,4 +224,54 @@
       }
     }
   }
+  .show{
+
+    display: block;
+    text-align: center;
+    position: fixed;
+    background-color: var.$text-color;
+    top: 100px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    
+  
+    
+  
+    a{
+      transition: 500ms;
+      margin: 3rem 0px;
+    color: #131313;
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      &:hover{
+       
+text-decoration: underline;
+      }
+      &:active{
+        color: var.$theme-color;
+      }
+    }
+
+   }
+}
+.close-btn{
+
+  font-size: 2.5rem;
+  font-weight:900;
+}
+.hide{
+  display: none !important;
+}
+.cancel{
+            
+  color: var.$theme-color;
+  font-size: 2.5rem;
+  &:hover {
+
+    color: #616161;
+  }
+
 }

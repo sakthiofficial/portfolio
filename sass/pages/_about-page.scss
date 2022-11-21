@@ -16,13 +16,31 @@
         @include res.responsive(xs) {
             flex-direction: column;
         }
+        @include res.responsive(md) {
+            flex-direction: column;
+        }
         &_image{
             
             padding: 0px 2rem;
            
+                  @include res.responsive(md) {
+                    padding: 0rem 9rem;
+                    margin-top: 2rem;
+                      }
+                      @include res.responsive(xs) {
+                        padding: 0rem 1rem;
+                        margin-top: 2rem;
+                          }
+           
             img{
                 width:28rem;
       opacity: 0.8;
+      @include res.responsive(xs) {
+        width: 100%;
+          }
+          @include res.responsive(md) {
+            width: 90%;
+              }
      
             }
         }
@@ -36,6 +54,14 @@
                padding: 2rem 2rem;
                margin: 6rem 0px;
             }
+            @include res.responsive(md) {
+                padding: 2rem 11rem;
+                margin: 6rem 0px;
+             }
+             @include res.responsive(lg) {
+                padding: 2rem 2rem;
+              
+             }
             p{
                 font-family: font.$text;
                 font-size: 1rem;

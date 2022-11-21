@@ -1,5 +1,6 @@
 
 @use "../abstract/_variables.sass" as var;
+@use "../abstract/mixin" as res;
 @mixin persentage ($val){
     .persent {
         margin: 1rem 0px;
@@ -8,6 +9,12 @@
         height: 6px;
       
         border-radius: 10px;
+        @include res.responsive(xs) {
+           width: 100%;
+              }
+              @include res.responsive(md) {
+                width: 100%;
+                   }
     }
     .persent-col{
         background-color:var.$theme-color;

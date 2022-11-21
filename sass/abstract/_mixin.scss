@@ -14,22 +14,26 @@
 
 @mixin responsive($picxels) {
 @if $picxels == xs{
-    @media (max-width: 576px) { 
+    @media only screen and (max-width: 576px) { 
         @content;
     }
 }  
 @if $picxels == sm{
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { }
+@media only screen and(min-width: 576px) {
+  
+ }
 } 
 @if $picxels == md{
   // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { } 
+  @media only screen and (max-width: 992px) { 
+  @content;
 } 
-@if $picxels == xl{
+} 
+@if $picxels == lg{
   // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
-   
+  @media only screen and (max-width: 1440px) { 
+   @content;
 }
 } 
 }

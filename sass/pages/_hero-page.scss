@@ -15,6 +15,11 @@
        
           
         }
+        @include res.responsive(md){
+          height: 105%;
+         
+            
+          }
 
     }
 
@@ -29,12 +34,19 @@
     justify-content: space-between;
     z-index: 999;
     @include res.responsive(xs){
-    width: 100%;
+  
     padding: 2rem 2rem;
        
         font-size: 2rem;
       
     }
+    @include res.responsive(md){
+  
+      padding: 2rem 2rem;
+         
+        
+        
+      }
 
     &__title {
       
@@ -46,6 +58,10 @@
       font-size: 1.7rem;
             
           }
+          @include res.responsive(md){
+            font-size: 1.7rem;
+                  
+                }
 
       }
 
@@ -111,6 +127,11 @@
         padding: 1rem 3rem;
           
         }
+        @include res.responsive(md){
+       
+          padding: 2rem 4rem;
+            
+          }
       .abt{
         font-weight:600;
         font-family: 'Poppins', sans-serif;
@@ -170,6 +191,11 @@
        
           
         }
+        @include res.responsive(md){
+          width: 100%;
+         
+            
+          }
       }
     }
   }

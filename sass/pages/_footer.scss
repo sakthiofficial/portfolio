@@ -1,10 +1,16 @@
 @use "../abstract/_variables.sass" as var;
 @use "../utilities/page-title" as head;
 @use "../global/font";
+@use "../abstract/mixin" as res;
 
 .footer{
     background-color:rgb(109, 107, 107);
-    margin-top: 9rem;
+    margin-top: 18rem;
+   
+         
+              @include res.responsive(xs) {
+                margin-top: 22rem;
+                  }
     .foot{
         font-family: font.$text;
        text-align: center;

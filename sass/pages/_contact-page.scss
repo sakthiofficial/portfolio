@@ -1,58 +1,128 @@
 @use "../abstract/_variables.sass" as var;
 @use "../utilities/page-title" as head;
 @use "../global/font";
- 
+@use "../abstract/mixin" as res;
 
 
-.contact-page{
+
+.contact-page {
     background-color: #131313;
     @include head.pageTitle();
-    &_content{
-        
+
+    &_content {
+
         margin-top: 10rem;
         font-family: font.$text;
-        p{
-           
+
+        @include res.responsive(xs) {
+            margin-top: 2rem;
+        }
+
+        p {
+
             font-size: 1.5rem;
             margin-right: 2rem;
             letter-spacing: 2px;
         }
-    &_info{
-        padding: 0rem 32rem;
-    
-        .logo{
-            display:flex;
-            align-items: center;
-            justify-content: left;
-            color: var.$text-color;
-            
+
+        &_info {
+            display: flex;
+            justify-content: center;
+            padding: auto;
+
+            @include res.responsive(xs) {
+
+                flex-direction: column;
+                align-items: center;
+                margin: 4rem 0px;
+
+            }
+
+            @include res.responsive(md) {
+                margin: 4rem 0px;
+
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                color: var.$text-color;
+
+                a {
+                    color: var.$text-color;
+                }
+
+            }
+
+            div {
+                color: var.$text-color;
+            }
         }
-        div{
-            color: var.$text-color;
-        }
-    }
-    &_items{
-        transition: 700ms;
-        margin: 2rem;
-        display: flex;
-        justify-content: center;
-        // background-color: #fff;
-        a{
-           padding: 0px 2rem;
-            color: #fff;
-            &:hover{
-                color:#9d9595;
+
+        &_items {
+            transition: 700ms;
+            margin: 2rem;
+            display: flex;
+            justify-content: center;
+
+            @include res.responsive(xs) {
+                justify-content: space-around;
+
+                margin-top: 0.3rem;
+                margin: 0rem;
+            }
+
+            @include res.responsive(md) {
+                justify-content: space-around;
+
+                margin-top: 0.3rem;
+                margin: 0rem;
+            }
+
+            // background-color: #fff;
+            a {
+                padding: 0px 2rem;
+                color: #fff;
+
+                @include res.responsive(xs) {
+                    padding: 0rem 0.5rem;
+                }
+
+                @include res.responsive(xs) {
+                    padding: 0rem 0.5rem;
+                }
+
+                & i {
+                    font-size: 2rem;
+
+                    &:hover {
+
+                       
+                        background: white;
+                        border-radius: 20%;
+                       
+                        height: 30px;
+                        color: black;
+                    }
+                }
+
+                &:hover {
+                    // color:#9d9595;
+                }
             }
         }
     }
+
+
 }
 
-    
-}
-.fan{
+.fan {
     margin-right: 0.5rem;
     padding: 1rem 1.5rem;
-    &:hover{
-        color:#9d9595;
+    font-size: 2rem;
+
+    &:hover {
+        color: #9d9595;
     }
 }

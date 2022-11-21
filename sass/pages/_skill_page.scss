@@ -22,23 +22,33 @@
         font-family: font.$text;
 
         display: flex;
+        justify-content: space-around;
 
         @include res.responsive(xs) {
+            flex-direction: column;
+        }
+        @include res.responsive(md) {
             flex-direction: column;
         }
 
         &-persentage {
             margin-top: 5rem;
-            padding: 0rem 10rem;
+            padding: 0rem 5rem;
             font-size: 1.5rem;
             font-weight: 800;
             @include res.responsive(xs) {
                 padding: 0rem 2rem;
             }
+            @include res.responsive(md) {
+                padding: 0rem 5rem;
+            }
 
             &__html {
                 margin: 2rem 0px;
-                @include persent.persentage(16rem);
+                @include persent.persentage(80%);
+                @include res.responsive(xs) {
+                    
+                      }
 
                 &.persent {
                     margin: 1rem 0px;
@@ -47,22 +57,22 @@
 
             &__css {
                 margin: 2rem 0px;
-                @include persent.persentage(13rem)
+                @include persent.persentage(65%)
             }
 
             &__js {
                 margin: 2rem 0px;
-                @include persent.persentage(11rem)
+                @include persent.persentage(60%)
             }
 
             &__bs {
                 margin: 2rem 0px;
-                @include persent.persentage(9rem)
+                @include persent.persentage(50%)
             }
 
             &__sass {
                 margin: 2rem 0px;
-                @include persent.persentage(8rem)
+                @include persent.persentage(45%)
             }
         }
 
@@ -89,6 +99,9 @@
                     img {
                         width: 155px;
                         margin: 10px;
+                        @include res.responsive(xs) {
+                            width: 120px;
+                              }
 
                     }
                 }
@@ -102,6 +115,9 @@
 
 
                         aspect-ratio: 1/1;
+                        @include res.responsive(xs) {
+                           width: 140px;
+                              }
                     }
                 }
 
@@ -109,11 +125,15 @@
                     @include res.responsive(xs) {
                         display: none;
                         text-align: center;
+                        
                     }
 
                     img {
                         width: 190px;
                         aspect-ratio: 1/1;
+                        @include res.responsive(xs) {
+                          width: 140px;
+                              }
 
 
                     }
@@ -130,6 +150,9 @@
 
                 img {
                     width: 190px;
+                    @include res.responsive(xs) {
+                       width: 140px;
+                          }
                 }
 
 
@@ -141,6 +164,9 @@
 
                 img {
                     width: 190px;
+                    @include res.responsive(xs) {
+                    width: 140px;
+                          }
                 }
 
                 @include res.responsive(xs) {
@@ -157,6 +183,9 @@
 
         display: flex;
         justify-content: space-between;
+        @include res.responsive(md) {
+            max-width: 100%;
+               }
 
         p {
             font-size: 0.8rem;

@@ -1,205 +1,147 @@
 @use "../abstract/_variables.sass" as var;
 @use "../utilities/page-title" as header;
 @use "../abstract/mixin" as res;
-@use "../global/font" ;
+@use "../global/font";
 
 .project-page {
     @include header.pageTitle();
     background-color: #131313;
-    &__images{
-       margin-top: 2rem;
-        padding: 2rem 4rem;
-        @include res.responsive(xs) {
-          padding: 0rem 1rem;
-         }
-        img{
-            display: block;
-           width: 100%;
-            
-          
-            aspect-ratio: 16/9;
-            @include res.responsive(xs) {
-             margin-top: 2rem;
-               }
-        }
-        .img-1{
-           display: flex;
-           @include res.responsive(xs) {
-           flex-direction: column;
-           }
-         
-        }
-        .fixed{
 
-            background-color: #fff;
+    &__images {
+        margin-top: 2rem;
+        padding: 2rem 1rem;
+        display: flex;
+        align-items: center;
+        // justify-content: space-around;
+        justify-content: center;
+        gap: 2rem;
+        cursor: pointer;
+
+        flex-wrap: wrap;
+
+
+        .img {
+            width: 100%;
+            height: 10rem;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                // aspect-ratio: 6/9;
+            }
+        }
+
+        .btn-2 {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+
+            button {
+                color: var.$theme-color;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            button:hover {
+                color: #9d9595;
+                font-size: 16px;
+
+
+                .fonAwe {
+                    color: var.$text-color;
+                }
+            }
+        }
+
+        .fixed {
+
             margin-right: 3rem;
             background-color: #323232;
-            
+            width: 20rem;
+            height: 12rem;
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 2px 1px 10px #616161;
+            transition: 1s;
+
             @include res.responsive(xs) {
-               
+
                 margin-right: 0rem;
                 margin-bottom: 1rem;
-             }
-             @include res.responsive(md) {
-               
+            }
+
+            @include res.responsive(md) {
+
                 margin-right: 1rem;
-              
-             }
-        &:hover{
-            box-shadow: 4px 2px 30px #616161;
 
-        }
-
-           }
-        
-        .img-2{
-            display: flex;
-            margin-top:2rem;
-            justify-content: space-around;
-            @include res.responsive(xs) {
-                padding: 0rem 1rem;
-                flex-direction: column;
-               }
-               @include res.responsive(md) {
-                padding: 0rem 1rem;
-               
-               }
-           
-            div{
-               
-                
-                background-color: #fff;
-                margin-right: 3rem;
-                background-color: #323232;
-                overflow: hidden;
-                border-radius: 10px;
-                @include res.responsive(xs) {
-                   
-                    
-                    margin-right: 0rem;
-                    margin-bottom: 1rem;
-                 }
-                 @include res.responsive(md) {
-                   
-                   
-                    margin-right: 0rem;
-                  
-                 }
-                
-            
-    
-               }
-         
-        }
-        &_countryApi{
-            // max-width: 350px;
-            div{
-                @include res.responsive(xs) {
-                  margin-right: 0rem;
-                    }
             }
 
-            img{
-                width: 370px;
-                
-                   @include res.responsive(md) {
-                    width: 100%;
-                   
-                    height: 140px;
-                    }
-                    @include res.responsive(xs) {
-                        width: 100%;
-                        height: 210px;
-                        }
+            &:hover {
+                box-shadow: 4px 2px 30px #616161;
+                height: 15rem;
+                transition: 500ms;
+
+
             }
+
         }
-        button{
+
+
+
+
+
+        button {
             border: none;
             background: transparent;
-            color:var.$text-color;
-            font-weight: 400;
+            color: var.$text-color;
+            font-weight: 550;
+            font-size: 14px;
             font-family: font.$text;
-            
-         
+
+
         }
 
-      
-        button:hover{
-              color:#9d9595;
-            .fonAwe{
-                color:var.$text-color;
-            }
-        }
-        
-        .btn{
+
+
+
+        .btn {
             transition: 500ms;
             text-align: center;
             width: 20rem;
             margin: 0.5rem 0px;
+
             @include res.responsive(xs) {
                 width: 100%;
-               }
-               @include res.responsive(md) {
+            }
+
+            @include res.responsive(md) {
                 width: 100%;
-                
-               }
-            
-         
+
+            }
+
+
         }
-        &_api{
-            max-width: 500px;
-            button{
-                color:var.$theme-color;
-                font-weight: 600;
-                &:hover{
-                   
-                  .fonAwe{
-                      color:var.$theme-color;
-                  }
+
+        &_api {
+            background-color: var.$theme-color !important;
+
+            &:hover {
+                background-color: #323232 !important;
             }
         }
 
-        img{
-            width: 500px;
-            height:210px;
-           
-               @include res.responsive(md) {
-                width: 100%;
-                height: 140px;
-                
-                }
-                @include res.responsive(xs) {
-                    width: 100%;
-                    height: 270px;
-                    
-                    }
-            
-        }
-        .btn{
-            width: 33rem;
-            @include res.responsive(xs) {
-               width: 100%;
-               }
-          
-               @include res.responsive(md) {
-                width: 100%;
-                }
-        }
-        }
-       
-
     }
-    
+
 }
-.fonAwe{
- 
-    color:#9d9595;
-  
-   
+
+.fonAwe {
+
+    color: #9d9595;
+
+
     font-size: 10px;
     margin-left: 5px;
-    
-    }
+
+}

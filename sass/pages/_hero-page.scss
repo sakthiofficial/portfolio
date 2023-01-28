@@ -2,25 +2,32 @@
 @use "../abstract/mixin" as res;
 
 .hero-page {
- 
-  
+
+
   &__background {
     img {
       position: absolute;
       z-index: -1;
       width: 100%;
-      height:100%;
-      
-      @include res.responsive(xs){
+      height: 100%;
+
+      @include res.responsive(xs) {
         height: 120%;
-       
-          
-        }
-        @include res.responsive(md){
-          height: 205%;
-         
-            
-          }
+
+
+      }
+
+      @include res.responsive(md) {
+        height: 205%;
+
+
+      }
+
+      @include res.responsive(md) {
+        height: 300%;
+
+
+      }
 
     }
 
@@ -28,68 +35,88 @@
 
   &__navBar {
 
- position:fixed;
- top: 0px;
- width: 95%;
- background-color: #131313;
- box-shadow: 0px 0.1px 0.5px var.$text-color;
+    position: fixed;
+    top: 0px;
+    width: 95%;
+    background-color: #131313;
+    box-shadow: 0px 0.1px 0.5px var.$text-color;
 
     padding: 1rem 2rem;
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 999;
-    @include res.responsive(xs){
-  
-    padding: 2rem 2rem;
-       
-        font-size: 2rem;
-        width: 85%;
-      
-    }
-    @include res.responsive(md){
-  
+
+    @include res.responsive(xs) {
+
       padding: 2rem 2rem;
 
-         
-        
-        
-      }
+      font-size: 2rem;
+      width: 85%;
+
+    }
+
+    @include res.responsive(md) {
+
+      padding: 2rem 2rem;
+
+
+
+
+    }
+
+    @include res.responsive(xl) {
+
+      padding: 2rem 3rem;
+      width: 97%;
+
+
+
+
+    }
 
     &__title {
-      
+
       h4 {
         font-size: 1.5rem;
         font-family: 'Poppins', sans-serif;
         color: var.$text-color;
-        @include res.responsive(xs){
-      font-size: 1.7rem;
-            
-          }
-          @include res.responsive(md){
-            font-size: 1.7rem;
-                  
-                }
+
+        @include res.responsive(xs) {
+          font-size: 1.7rem;
+
+        }
+
+        @include res.responsive(md) {
+          font-size: 1.7rem;
+
+
+        }
+
+        @include res.responsive(xl) {
+          font-size: 3rem;
+
+        }
 
       }
-    
 
- 
+
+
 
     }
 
     &__menus {
-      
-       
-      @include res.responsive(xs){
-        display:none;
-        
-       
-          
-        }
-       
-       
+
+
+      @include res.responsive(xs) {
+        display: none;
+
+
+
+      }
+
+
       a {
         transition: 500ms;
         text-decoration: none;
@@ -98,6 +125,13 @@
         margin-right: 2rem;
         font-size: 0.8rem;
 
+        @include res.responsive(xl) {
+          font-size: 2rem;
+          padding: 0rem 3rem;
+
+
+        }
+
         &:hover {
 
           color: #616161;
@@ -105,89 +139,120 @@
 
       }
     }
-    .NavToggle{
-         
+
+    .NavToggle {
+
       color: var.$text-color;
       display: none;
-     
+
       &:hover {
 
         color: #616161;
       }
-    
-      
-        @include res.responsive(xs){
-     
-          display: block;
-             
-           }
+
+
+      @include res.responsive(xs) {
+
+        display: block;
+
+      }
     }
 
 
 
   }
-  &-content{
- margin-top: 4.5rem;
+
+  &-content {
+    margin-top: 4.5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    @include res.responsive(xs){
+
+    @include res.responsive(xs) {
       flex-direction: column;
-     
-        
-      }
-      @include res.responsive(md){
-        flex-direction: column;
-        
-        
-       
-          
-        }
-    &-about{
+
+
+    }
+
+    @include res.responsive(md) {
+      flex-direction: column;
+
+
+
+
+    }
+
+    @include res.responsive(xl) {
+
+      margin-top: 5.5rem;
+
+
+    }
+
+    &-about {
       line-height: 3.5rem;
-      padding:2rem 8rem;
+      padding: 2rem 8rem;
       font-weight: 900;
-      @include res.responsive(xs){
-       
+
+      @include res.responsive(xs) {
+
         padding: 1rem 3rem;
-          
-        }
-        @include res.responsive(md){
-       
-          padding: 15rem 2rem;
-            
-          }
-      .abt{
-        font-weight:600;
+
+      }
+
+      @include res.responsive(md) {
+
+        padding: 15rem 2rem;
+
+      }
+
+      @include res.responsive(xl) {
+
+        line-height: 5.3rem;
+
+
+      }
+
+      .abt {
+        font-weight: 600;
         font-family: 'Poppins', sans-serif;
         margin-left: 2px;
       }
-      p{
-      
+
+      p {
+
         color: var.$text-color;
         font-size: 1.5rem;
         font-family: 'Ubuntu', sans-serif;
-        @include res.responsive(xs){
-       
-        
-          
+
+        @include res.responsive(xl) {
+
+          font-size: 2.5rem;
         }
-        
+
       }
-      h4{
-    
+
+      h4 {
+
         font-size: 2.5rem;
-        color:var.$text-color;
-         font-family: 'Poppins', sans-serif;
-         letter-spacing: 2.5px;
+        color: var.$text-color;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 2.5px;
         text-shadow: -1px -1px 0.1px #f5f5f540;
+
+        @include res.responsive(xl) {
+
+          font-size: 3.5rem;
+
+        }
       }
-      &__btn{
-        button{
+
+      &__btn {
+        button {
           font-family: 'Ubuntu', sans-serif;
           transition: 500ms;
-          background-color:var.$theme-color;
-          padding:0.1rem 1.5rem;
+          background-color: var.$theme-color;
+          padding: 0.1rem 1.5rem;
           font-size: 14px;
           border: none;
           outline: none;
@@ -195,36 +260,54 @@
           font-weight: 600;
           word-spacing: 5px;
           letter-spacing: 1px;
-          &:hover{
+
+          @include res.responsive(xl) {
+
+            font-size: 2rem;
+
+          }
+
+          &:hover {
             color: var.$theme-color;
-            border:1px solid var.$theme-color;
-            background-color:transparent;
-            
+            border: 1px solid var.$theme-color;
+            background-color: transparent;
+
 
           }
         }
       }
     }
-    
-    &-img{
-    margin-top: 4.3rem;
-      img{
-      width:35rem;
-      opacity: 0.8;
-      @include res.responsive(xs){
-        width: 100%;
-       
-          
-        }
-        @include res.responsive(md){
+
+    &-img {
+      margin-top: 4.3rem;
+
+      img {
+        width: 35rem;
+        opacity: 0.8;
+
+        @include res.responsive(xs) {
           width: 100%;
-         
-            
-          }
+
+
+        }
+
+        @include res.responsive(md) {
+          width: 100%;
+
+
+        }
+
+        @include res.responsive(xl) {
+          width: 45rem;
+          height: 40rem;
+
+        }
+
       }
     }
   }
-  .show{
+
+  .show {
 
     display: block;
     text-align: center;
@@ -235,40 +318,46 @@
     width: 100vw;
     height: 100vh;
     z-index: 1;
-    
-  
-    
-  
-    a{
+
+
+
+
+    a {
       transition: 500ms;
       margin: 3rem 0px;
-    color: #131313;
+      color: #131313;
       display: block;
       font-size: 1.5rem;
       font-weight: 700;
-      &:hover{
-       
-text-decoration: underline;
+
+      &:hover {
+
+        text-decoration: underline;
       }
-      &:active{
+
+      &:active {
         color: var.$theme-color;
       }
     }
 
-   }
+  }
 }
-.close-btn{
+
+.close-btn {
 
   font-size: 2.5rem;
-  font-weight:900;
+  font-weight: 900;
 }
-.hide{
+
+.hide {
   display: none !important;
 }
-.cancel{
-            
+
+.cancel {
+
   color: var.$theme-color;
   font-size: 2.5rem;
+
   &:hover {
 
     color: #616161;

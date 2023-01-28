@@ -1,80 +1,89 @@
-@use"../abstract/_variables.sass" as var ;
+@use"../abstract/_variables.sass" as var;
 @use "../utilities/page-title" as header;
 @use "../global/font";
 @use "../abstract/mixin" as res;
-  
 
-.about-page{
-    width: 100%;
-    height: 100%;
-    @include header.pageTitle();
-    background-color: #131313;
-    &__content{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        @include res.responsive(xs) {
-            flex-direction: column;
-        }
-        @include res.responsive(md) {
-            flex-direction: column;
-        }
-        &_image{
-            
-            padding: 0px 2rem;
-           
-                  @include res.responsive(md) {
-                    padding: 0rem 9rem;
-                    margin-top: 2rem;
-                      }
-                      @include res.responsive(xs) {
-                        padding: 0rem 1rem;
-                        margin-top: 2rem;
-                          }
-           
-            img{
-                width:28rem;
-      opacity: 0.8;
-      @include res.responsive(xs) {
-        width: 100%;
-          }
-          @include res.responsive(md) {
-            width: 90%;
-              }
-     
-            }
-        }
-        &_text{
-            
-            background-color: #131313;
-            color:var.$text-color;
-            text-align:justify;
-            padding: 0rem 11rem;
-            @include res.responsive(xs) {
-               padding: 2rem 2rem;
-               margin: 6rem 0px;
-            }
-            @include res.responsive(md) {
-                padding: 2rem 11rem;
-                margin: 6rem 0px;
-             }
-             @include res.responsive(lg) {
-                padding: 2rem 2rem;
-              
-             }
-            p{
-                font-family: font.$text;
-                font-size: 1rem;
-                line-height: 2rem;
-            }
-            button{
-                margin-left: 5px;
-                font-family: font.$text;
-                font-size: 1rem;
-        background:transparent;
-        border: none;
-        color:var.$theme-color;
-            }
-        }
+
+.about-page {
+  width: 100%;
+  height: 100%;
+  @include header.pageTitle();
+  background-color: #131313;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include res.responsive(xs) {
+      flex-direction: column;
     }
+
+    @include res.responsive(md) {
+      flex-direction: column;
+    }
+
+
+
+    &_text {
+
+      background-color: #131313;
+      color: var.$text-color;
+      text-align: justify;
+
+
+      @include res.responsive(xs) {
+        padding: 0rem 0rem;
+        margin: 6rem 0px;
+
+        p {
+          padding: 0rem 0rem !important;
+
+        }
+      }
+
+      @include res.responsive(md) {
+        padding: 2rem 11rem;
+        margin: 6rem 0px;
+      }
+
+      @include res.responsive(lg) {
+        padding: 2rem 2rem;
+
+        p {
+          padding: 7rem 11rem;
+
+        }
+
+
+      }
+
+      @include res.responsive(xl) {
+        padding: 2rem 2rem;
+
+        p {
+          padding: 7rem 25rem;
+
+        }
+
+
+      }
+
+      p {
+        font-family: font.$text;
+        font-size: 1rem;
+        line-height: 2.5rem;
+
+      }
+
+      button {
+        margin-left: 5px;
+        font-family: font.$text;
+        font-size: 1rem;
+        background: transparent;
+        border: none;
+        color: var.$theme-color;
+      }
+    }
+  }
 }

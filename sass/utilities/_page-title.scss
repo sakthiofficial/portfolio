@@ -1,10 +1,12 @@
 @use "../abstract/_variables.sass" as var;
+@use "../abstract/mixin" as res;
+
 @use "../global/font";
 
 @mixin pageTitle {
-    
+
     &__title {
-        color:var.$text-color;
+        color: var.$text-color;
         margin-top: 2rem;
 
         text-align: center;
@@ -13,6 +15,13 @@
             font-family: font.$text;
             font-size: 1.8rem;
             letter-spacing: 2px;
+
+            @include res.responsive(xl) {
+                font-size: 3.5rem;
+                letter-spacing: 4px;
+
+
+            }
         }
 
         p {
@@ -21,6 +30,13 @@
             color: var.$theme-color;
             letter-spacing: 2px;
 
+            @include res.responsive(xl) {
+                font-size: 1.8rem;
+
+                letter-spacing: 4px;
+
+
+            }
         }
 
     }

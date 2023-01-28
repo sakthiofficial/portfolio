@@ -9,9 +9,10 @@
 
     background-color: #131313;
     @include header.pageTitle();
-    &__title{
+
+    &__title {
         @include res.responsive(xs) {
-          margin-top: 2rem;
+            margin-top: 2rem;
         }
     }
 
@@ -27,6 +28,7 @@
         @include res.responsive(xs) {
             flex-direction: column;
         }
+
         @include res.responsive(md) {
             flex-direction: column;
         }
@@ -36,52 +38,78 @@
             padding: 0rem 5rem;
             font-size: 1.5rem;
             font-weight: 800;
+
             @include res.responsive(xs) {
                 padding: 0rem 2rem;
             }
+
             @include res.responsive(md) {
                 padding: 0rem 5rem;
             }
 
+            @include res.responsive(md) {
+                padding: 0rem 5rem;
+            }
+
+            @include res.responsive(xl) {
+                font-size: 2.8rem;
+                font-weight: 800;
+            }
+
+
             &__html {
                 margin: 2rem 0px;
-                @include persent.persentage(80%);
-                @include res.responsive(xs) {
-                    
-                      }
+                @include persent.persentage(60%);
+
+                @include res.responsive(xs) {}
 
                 &.persent {
                     margin: 1rem 0px;
+
                 }
             }
 
             &__css {
                 margin: 2rem 0px;
-                @include persent.persentage(65%)
+                @include persent.persentage(55%)
             }
 
             &__js {
                 margin: 2rem 0px;
-                @include persent.persentage(60%)
+                @include persent.persentage(50%)
             }
 
             &__bs {
                 margin: 2rem 0px;
-                @include persent.persentage(50%)
+                @include persent.persentage(45%)
             }
 
             &__sass {
                 margin: 2rem 0px;
-                @include persent.persentage(45%)
+                @include persent.persentage(65%)
             }
         }
 
         &__logos {
-            margin-top: 4rem;
+            margin-top: 3rem;
             padding: 2rem 0px;
 
-            @include res.responsive(xs) {
-                
+            @include res.responsive(xs) {}
+
+            .logo {
+                width: 12rem;
+                height: 11rem;
+
+                @include res.responsive(xl) {
+                    width: 20rem;
+                    height: 16rem;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
             }
 
             img {
@@ -91,6 +119,7 @@
             .img-1 {
                 display: flex;
                 justify-content: space-around;
+
                 @include res.responsive(xs) {
                     justify-content: space-between;
                 }
@@ -99,9 +128,14 @@
                     img {
                         width: 155px;
                         margin: 10px;
+
                         @include res.responsive(xs) {
                             width: 120px;
-                              }
+                        }
+
+                        @include res.responsive(xl) {
+                            width: 185px;
+                        }
 
                     }
                 }
@@ -115,9 +149,14 @@
 
 
                         aspect-ratio: 1/1;
+
                         @include res.responsive(xs) {
-                           width: 140px;
-                              }
+                            width: 140px;
+                        }
+
+                        @include res.responsive(xl) {
+                            width: 205px;
+                        }
                     }
                 }
 
@@ -125,15 +164,20 @@
                     @include res.responsive(xs) {
                         display: none;
                         text-align: center;
-                        
+
                     }
 
                     img {
                         width: 190px;
                         aspect-ratio: 1/1;
+
                         @include res.responsive(xs) {
-                          width: 140px;
-                              }
+                            width: 140px;
+                        }
+
+                        @include res.responsive(xl) {
+                            width: 205px;
+                        }
 
 
                     }
@@ -144,15 +188,21 @@
                 display: flex;
                 justify-content: space-around;
                 margin-top: 20px;
+
                 @include res.responsive(xs) {
                     justify-content: space-between;
                 }
 
                 img {
                     width: 190px;
+
                     @include res.responsive(xs) {
-                       width: 140px;
-                          }
+                        width: 140px;
+                    }
+
+                    @include res.responsive(xl) {
+                        width: 205px;
+                    }
                 }
 
 
@@ -164,9 +214,14 @@
 
                 img {
                     width: 190px;
+
                     @include res.responsive(xs) {
-                    width: 140px;
-                          }
+                        width: 140px;
+                    }
+
+                    @include res.responsive(xl) {
+                        width: 205px;
+                    }
                 }
 
                 @include res.responsive(xs) {
@@ -183,9 +238,14 @@
 
         display: flex;
         justify-content: space-between;
+
         @include res.responsive(md) {
             max-width: 100%;
-               }
+        }
+
+        @include res.responsive(xl) {
+            max-width: 490px;
+        }
 
         p {
             font-size: 0.8rem;

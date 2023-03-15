@@ -823,9 +823,11 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
-.project-page__images .btn-2 button:hover {
+.project-page__images .btn-2 .link {
+  margin-left: 0.2rem;
+}
+.project-page__images .btn-2 button:hover .link {
   color: #9d9595;
-  font-size: 16px;
 }
 .project-page__images .btn-2 button:hover .fonAwe {
   color: #e6e2e2;

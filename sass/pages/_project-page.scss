@@ -137,6 +137,14 @@
             }
         }
 
+        &_form {
+            background-color: var.$theme-color !important;
+
+            &:hover {
+                background-color: #323232 !important;
+            }
+        }
+
     }
 
 }

@@ -888,6 +888,12 @@ body {
 .project-page__images_api:hover {
   background-color: #323232 !important;
 }
+.project-page__images_form {
+  background-color: #a50707 !important;
+}
+.project-page__images_form:hover {
+  background-color: #323232 !important;
+}
 
 .fonAwe {
   color: #9d9595;

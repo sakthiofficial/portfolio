@@ -376,7 +376,21 @@
 
     </main>
     <script src="./assets/js/index.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: "25px",
+            duration: 2500,
+            delay: 400
+        });
+        ScrollReveal().reveal('.hero-page-content-about ,.skill-page_content-persentage', { delay: 200, origin: "left" });
+        ScrollReveal().reveal('.hero-page-content-img img,.skill-page_content__logos', { delay: 1000, origin: "right" });
 
+        ScrollReveal().reveal('.about-page__content_text p,.fixed', { delay: 200, origin: "top" });
+
+
+    </script>
 </body>
 
 </html>
